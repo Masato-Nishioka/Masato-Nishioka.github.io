@@ -17,7 +17,7 @@
 
 - [図解即戦力 Google Cloudのしくみと技術がこれ1冊でしっかりわかる教科書［改訂2版］](https://www.amazon.co.jp/E5-9B-B3-E8-A7-A3-E5-8D-B3-E6-88-A6-E5-8A-9B-Google-Cloud-E3-81-AE-E3-81-97-E3-81-8F-E3-81-BF-E3-8/dp/429714347X/ref=dp_ob_title_bk)
 - [AWSサービスやAzureサービスとGoogle Cloudを比較する](https://cloud.google.com/docs/get-started/aws-azure-gcp-service-comparison?hl=ja)
-- [Google Cloud公式模擬試験](https://cloud.google.com/learn/certification/cloud-architect?hl=ja)(20問)
+- [Google Cloud公式模擬試験](https://cloud.google.com/learn/certification/cloud-architect?hl=ja#:~:text=%E5%8F%82%E8%80%83%E6%83%85%E5%A0%B1-,3.%20%E6%A8%A1%E6%93%AC%E8%A9%A6%E9%A8%93,-%E6%A8%A1%E6%93%AC%E8%A9%A6%E9%A8%93%E3%82%92)(20問)
 - [Udemy【最短攻略】Google Cloud 認定 Professional Cloud Architect 模擬問題集](https://www.udemy.com/course/google-cloud-professional-cloud-architect-i/?srsltid=AfmBOopbVaGJdT34x-_Io3Euz4eZFVrhZ5jPvWMEF6X66rJEm-SNAST2&couponCode=KEEPLEARNING)(170問)
 
 ## 学習時間
