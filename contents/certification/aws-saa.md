@@ -6,8 +6,8 @@
 
 ### 学習開始時点の知識
 
-- 実務経験：1.5ヶ月
-- IT関連知識：[AWS Certified Cloud Practitioner](https://aws.amazon.com/jp/certification/certified-cloud-practitioner/)取得済み
+- 実務経験：1.5ヶ月(AWS)
+- IT系保有資格：AWS CLF
 
 ### 受験するモチベーション
 

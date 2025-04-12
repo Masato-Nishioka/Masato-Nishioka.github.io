@@ -7,7 +7,7 @@
 ### 学習開始時点の知識
 
 - 実務8ヶ月(Ansible, AWS, Python)
-- 保有資格：AWS SAA, LPIC-1
+- IT系保有資格：AWS SAA, LPIC-1
 
 ### 受験するモチベーション
 
