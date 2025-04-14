@@ -1,7 +1,7 @@
 # GitHub Appを使用して他組織のリポジトリをクローン
 
 GitHub Actionsのワークフロー内で他組織に存在するリポジトリをクローンする際に  
-PAT(personal access token)を使用していたが、セキュリティと管理工数の観点から、  
+PAT(personal access tokens)を使用していたが、セキュリティと管理工数の観点から、  
 GitHub Appを使用することになったため、ナレッジを記載する。
 
 ## 確認事項
@@ -17,7 +17,7 @@ GitHub Appを使用することになったため、ナレッジを記載する�
 ## 手順
 
 ここからGitHub Appを使用し、ワークフロー内で他組織に存在するリポジトリをクローンする実装方法を記載します。  
-なお、組織名を区別するために、実行するワークフローが存在する組織を**組織A**  
+なお、組織名を区別するために、実行するワークフローが存在する組織を**組織A**、  
 クローンしたいリポジトリが存在する組織を**組織B**と記載します。
 
 ### GitHub Appの作成
@@ -44,21 +44,21 @@ GitHub Appを使用することになったため、ナレッジを記載する�
 
 ### GitHub AppのIDと秘密鍵を生成・保存
 
-作成が完了すると、以下のページに作成したGithub Appが表示されます  
+作成が完了すると、以下のページに作成したGitHub Appが表示されます。  
 <https://github.com/organizations/{組織名}/settings/apps>
 
 > [!NOTE]  
 >`{組織名}`はGitHub Appを作成した組織名に置換してください。  
->Organization > settings > Developer Settings > GitHub Appから作成したGitHub Appを参照できます。
+>Organization > Settings > Developer Settings > GitHub Appsから作成したGitHub Appを参照できます。
 
 作成したGitHub Appを選択後、[Generate a private key]を選択し、秘密鍵を生成して保存します。  
 また、App IDも後に使用するので書き留めておいてください。
 
 ### GitHub Appのインストール
 
-作成したGitHub Appをインストールします。
+作成したGitHub Appをインストールします。  
 以下のページから組織A,Bの対象リポジトリにインストールしてください。  
-<https://github.com/organizations/{組織名}/settings/apps/{GitHub_APP名}installations>
+<https://github.com/organizations/{組織名}/settings/apps/{GitHub_APP名}/installations>
 
 > [!NOTE]  
 >`{組織名}`はGitHub Appを作成した組織名に置換してください。  
@@ -69,7 +69,7 @@ GitHub Appを使用することになったため、ナレッジを記載する�
 ### GitHub AppのIDと秘密鍵をVariablesとSecretに保存
 
 組織AにGitHub AppのIDと秘密鍵をVariablesとSecretに保存します。  
-<https://github.com/organizations/{組織A名}/{リポジトリ名}/settings/secrets/actions>
+<https://github.com/{組織A名}/{リポジトリ名}/settings/secrets/actions>
 
 > [!NOTE]  
 >`{組織A名}`は組織A名に置換してください。  
