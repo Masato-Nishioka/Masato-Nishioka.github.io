@@ -1,4 +1,4 @@
-# GitHub Pages × JekyllでMarkdownの`{{ }}`を壊さずに表示する方法
+# GitHub Pages × JekyllでMarkdownの{% raw %}`{{ }}`{% endraw %}を壊さずに表示する方法
 
 GitHub Pagesは、デフォルトで[Jekyll](https://jekyllrb.com/)という静的サイトジェネレーターを使用しています。  
 Jekyllは、`.md`（Markdown）ファイルを自動的に`.html`ファイルに変換して公開できる便利な仕組みですが、**Liquidテンプレートエンジン**という仕組みを使っているために、Markdownに特定の構文を書くと意図しない変換が起こることがあります。
