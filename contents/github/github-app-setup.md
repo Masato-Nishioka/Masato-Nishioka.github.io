@@ -95,13 +95,13 @@ jobs:
         id: app_token
         uses: actions/create-github-app-token@v1
         with:
-          app-id: ${{ vars.APP_ID }}
-          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          app-id: {% raw %}${{ vars.APP_ID }}{% endraw %}
+          private-key: {% raw %}${{ secrets.APP_PRIVATE_KEY }}{% endraw %}
           owner: {組織B名}
 
       - name: Clone private repository
         env:
-          GH_TOKEN: ${{ steps.app_token.outputs.token }}
+          GH_TOKEN: {% raw %}${{ steps.app_token.outputs.token }}{% endraw %}
         run: |
           git clone https://x-access-token:"$GH_TOKEN"@github.com/{組織B名}/{リポジトリ名}.git
 
