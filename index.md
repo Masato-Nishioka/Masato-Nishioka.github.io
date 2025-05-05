@@ -7,7 +7,7 @@
 
 ### GitHub Pages
 
-- [GitHub Pages × JekyllでMarkdownの`{{ }}`を壊さずに表示する方法](/contents/github/github-pages-jekyll-liquid-escape.md)
+- [GitHub Pages × JekyllでMarkdownの{% raw %}`{{ }}`{% endraw %}を壊さずに表示する方法](/contents/github/github-pages-jekyll-liquid-escape.md)
 
 ## 資格
 
