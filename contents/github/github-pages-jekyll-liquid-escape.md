@@ -31,7 +31,7 @@ private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
 ところが、Jekyllは {% raw %}{{ vars.APP_ID }}{% endraw %} や {% raw %}{{ secrets.APP_PRIVATE_KEY }}{% endraw %} をテンプレートとして扱おうとするため、これが原因でページが正しく生成されず、**空になったりエラーになったり**することがあります。
 
-## 解決方法：{% raw %}{% raw %}{% raw %}{% endraw %}{% endraw %} と {% raw %}{% raw %}{% endraw %}{% endraw %}{% endraw %}{% endraw %}
+## 解決方法：`raw`タグを使用する
 
 Jekyllのテンプレート構文に対して、「この部分はそのまま表示してね」と伝える方法があります。それが `raw` タグです。
 
