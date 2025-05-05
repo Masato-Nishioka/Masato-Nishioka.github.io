@@ -60,7 +60,9 @@ def wrap_raw_in_md_files(directory):
                     content = f.read()
 
                 # `${{` で始まり `}}` で終わる構文を `raw` タグで囲う
+                {% raw %}
                 updated_content = content.replace("${{", "{% raw %}${{").replace("}}", "}}{% endraw %}")
+                {% endraw %}
 
                 with open(file_path, "w", encoding="utf-8") as f:
                     f.write(updated_content)
