@@ -16,7 +16,7 @@ Jekyllは、Liquidというテンプレートエンジンを使用しており�
 {% raw %}${{ secrets.MY_SECRET }}{% endraw %}
 ```
 
-この場合、Jekyllは`${{`の中の{% raw %}`{{ secrets.MY_SECRET }}`{% endraw %}をLiquidテンプレートと解釈しようとしてしまうため、意図したとおりに表示されなくなります。表示が崩れる、もしくは空になる、などの不具合が出ます。
+この場合、Jekyllは{% raw %}{{ secrets.MY_SECRET }}{% endraw %}をLiquidテンプレートと解釈しようとしてしまうため、意図したとおりに表示されなくなります。表示が崩れる、もしくは空になる、などの不具合が出ます。
 
 ## 変換ミスの例
 
@@ -29,7 +29,7 @@ private-key: ${{ secrets.APP_PRIVATE_KEY }}
 {% endraw %}
 ```
 
-ところが、Jekyllは {% raw %}`{{ vars.APP_ID }}`{% endraw %} や {% raw %}`{{ secrets.APP_PRIVATE_KEY }}`{% endraw %} をテンプレートとして扱おうとするため、これが原因でページが正しく生成されず、**空になったりエラーになったり**することがあります。
+ところが、Jekyllは {% raw %}{{ vars.APP_ID }}{% endraw %} や {% raw %}{{ secrets.APP_PRIVATE_KEY }}{% endraw %} をテンプレートとして扱おうとするため、これが原因でページが正しく生成されず、**空になったりエラーになったり**することがあります。
 
 ## 解決方法：`{% raw %}{% raw %}{% endraw %}` と `{% raw %}{% endraw %}{% endraw %}`
 
@@ -47,7 +47,7 @@ Jekyllのテンプレート構文に対して、「この部分はそのまま�
 
 毎回手動で `raw` タグをつけるのは面倒なので、私は以下のPythonスクリプトで自動変換できるようにしました。
 
-このスクリプトは、指定したディレクトリ内のMarkdownファイル内にある {% raw %}`${{ ... }}`{% endraw %} の構文を探して、自動的に {% raw %}`{% raw %}`{% endraw %} と {% raw %}`{% endraw %}`{% endraw %} で囲ってくれます。
+このスクリプトは、指定したディレクトリ内のMarkdownファイル内にある {% raw %}${{ ... }}{% endraw %} の構文を探して、自動的に {% raw %}{% raw %}{% endraw %} と {% raw %}{% endraw %}{% endraw %} で囲ってくれます。
 
 ### スクリプト
 
@@ -91,9 +91,9 @@ python wrap_raw.py
 ## まとめ
 
 - GitHub PagesはJekyllを使用しており、`.md` を自動で `.html` に変換する。
-- しかし、Jekyllのテンプレートエンジン（Liquid）によって、{% raw %}`{{ }}`{% endraw %} の中が意図せず処理されてしまう。
-- GitHub Actionsのような構文（{% raw %}`${{ ... }}`{% endraw %}）はそのまま書くと表示が崩れる。
-- これを防ぐには {% raw %}`{% raw %}`{% endraw %} で囲む必要がある。
+- しかし、Jekyllのテンプレートエンジン（Liquid）によって、{% raw %}{{ }}{% endraw %} の中が意図せず処理されてしまう。
+- GitHub Actionsのような構文（{% raw %}${{ ... }}{% endraw %}）はそのまま書くと表示が崩れる。
+- これを防ぐには {% raw %}{% raw %}{% endraw %} で囲む必要がある。
 - Pythonスクリプトを使えば、自動でこれを変換してくれるので、手間を減らすことができる。
 
 ---
