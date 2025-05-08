@@ -56,8 +56,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Hello, ${{ github.event.inputs.name }}"
-          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Hello, {% raw %}${{ github.event.inputs.name }}{% endraw %}"
+          echo "Environment: {% raw %}${{ github.event.inputs.environment }}{% endraw %}"
 ```
 
 ## Ansible 側の内容
@@ -102,21 +102,22 @@ inputs:
 ```yaml
 - name: Trigger GitHub Actions workflow
   ansible.builtin.uri:
-    url: "https://api.github.com/repos/{{ repo_owner }}/{{ repo_name }}/actions/workflows/{{ workflow_file | basename }}/dispatches"
+    url: "https://api.github.com/repos/{% raw %}{{ repo_owner }}{% endraw %}/{% raw %}{{ repo_name }}{% endraw %}/actions/workflows/{% raw %}{{ workflow_file | basename }}{% endraw %}/dispatches"
     method: POST
     headers:
       Accept: "application/vnd.github+json"
-      Authorization: "Bearer {{ github_token }}"
+      Authorization: "Bearer {% raw %}{{ github_token }}{% endraw %}"
     body_format: json
     body:
-      ref: "{{ branch_name }}"
-      inputs: "{{ inputs }}"
+      ref: "{% raw %}{{ branch_name }}{% endraw %}"
+      inputs: "{% raw %}{{ inputs }}{% endraw %}"
     status_code: 204
   register: result
 
 - name: Show result
   ansible.builtin.debug:
     var: result
+
 ```
 
 ## 実行コマンド
