@@ -1,0 +1,4 @@
+workflow_file: ".github/workflows/sample1.yml"
+inputs:
+  name: "sample-name"
+  environment: "staging"

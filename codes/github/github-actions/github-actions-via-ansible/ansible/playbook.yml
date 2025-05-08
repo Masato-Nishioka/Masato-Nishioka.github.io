@@ -1,0 +1,6 @@
+- name: Trigger GitHub Actions via Ansible
+  connection: local
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - trigger_workflow

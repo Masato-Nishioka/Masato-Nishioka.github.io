@@ -1,5 +1,9 @@
 ## GitHub
 
+### GitHub Actions
+
+- [GitHub Actions を Ansible 経由で実行してみる](/contents/github/github-actions/github-actions-via-ansible.md)
+
 ### GitHub App
 
 - [GitHub Appとは](/contents/github/github-app/github-app-overview.md)
