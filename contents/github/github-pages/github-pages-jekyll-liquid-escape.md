@@ -46,7 +46,7 @@ Jekyllのテンプレート構文に対して、「この部分はそのまま�
 
 以下にコードを配置しています。
 
-<https://github.com/Masato-Nishioka/Masato-Nishioka.github.io/blob/main/wrap_raw.py>
+<https://github.com/Masato-Nishioka/Masato-Nishioka.github.io/blob/main/codes/github/github-pages/wrap_raw.py>
 
 ---
 
