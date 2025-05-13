@@ -1,6 +1,6 @@
 ## GitHub
 
-- [GitHub Actions を Ansible 経由で実行してみる](/contents/github/github-actions-via-ansible.md)
+- [Ansible から GitHub Actions のワークフローをトリガーする](/contents/github/github-actions-via-ansible.md)
 - [GitHub Appとは](/contents/github/github-app-overview.md)
 - [GitHub Appを使用して他組織のリポジトリをクローン](/contents/github/github-app-setup.md)
 - [GitHub Pages × JekyllでMarkdownの{% raw %}`{{ }}`{% endraw %}を壊さずに表示する方法](/contents/github/github-pages-jekyll-liquid-escape.md)

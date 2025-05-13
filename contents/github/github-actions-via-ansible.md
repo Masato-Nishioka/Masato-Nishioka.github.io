@@ -1,7 +1,6 @@
-# GitHub Actions を Ansible 経由で実行してみる
+# Ansible から GitHub Actions のワークフローをトリガーする
 
-main ブランチじゃないのに `workflow_dispatch` が動いてた。ちょっと気になったので調べた。  
-あと、Ansible で叩けそうだったので試してみたかった。
+Ansible経由で ワークフローの`workflow_dispatch`をトリガーしている実装例があり、気になったので実装してみた。
 
 ## ディレクトリ構成
 
@@ -133,12 +132,7 @@ ansible-playbook -i localhost, playbook.yml
 - インフラ構成管理のフローの一部として GitHub Actions を組み込みたいときに使える。
 - CI/CD の実行を Ansible で管理したいケースに向いてる。
 
-## やってみた結果
-
-- `main` ブランチになくても `workflow_dispatch` トリガーで動く
-- Ansible の `uri` モジュールで GitHub API 叩けることを確認
-
-## 感想など
+## 感想
 
 Ansible から GitHub Actions を操作できるの、けっこう便利だった。  
 変数ファイルを分ければ複数のワークフローも使いまわせる。  
