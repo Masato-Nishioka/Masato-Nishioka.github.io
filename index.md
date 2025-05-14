@@ -20,4 +20,4 @@
 
 ### その他
 
-- [Anki共有デッキをスプレッドシートで一括編集し、自分用のデッキを作成する](/contents/certification/anki-shared-deck-customize.md)
+- [Anki共有デッキをスプレッドシートで一括編集し、自分用のデッキを作成する](/contents/certification/other/anki-shared-deck-customize.md)
