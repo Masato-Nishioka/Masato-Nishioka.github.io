@@ -20,7 +20,7 @@
 
 ## 学習時間
 
-所用日数：14d(2024/09/15~2024/09/28)
+所用日数：14d(2024/09/15~2024/09/28)  
 合計時間：約30h
 
 - [Ping-t](https://mondai.ping-t.com/g/question_subjects#content-large_category_3)の最強WEB問題集: 約30h(2周+α)

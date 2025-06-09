@@ -4,6 +4,7 @@
 
 ## GitHub
 
+- [GitHub Actionsのワークフローを作成する際のプロンプト](/contents/github/workflow-prompt.md)
 - [Ansible から GitHub Actions のワークフローをトリガーする](/contents/github/github-actions-via-ansible.md)
 - [GitHub Appとはなにか、どのようなメリットがあるのか](/contents/github/github-app-overview.md)
 - [GitHub Appを使用して他組織のリポジトリをクローン](/contents/github/github-app-setup.md)
@@ -11,11 +12,12 @@
 
 ## 資格
 
-- [AWS Certified Cloud Practitioner(CLF-C02) 合格体験記](/contents/certification/how-I-passed-the-exam/aws-clf.md)
-- [AWS Certified Solutions Architect - Associate(SAA-C03) 合格体験記](/contents/certification/how-I-passed-the-exam/aws-saa.md)
-- [LPIC-1 Exam 101(Version: 5.0) 合格体験記](/contents/certification/how-I-passed-the-exam/lpic-101.md)
-- [LPIC-1 Exam 102(Version: 5.0) 合格体験記](/contents/certification/how-I-passed-the-exam/lpic-102.md)
+- [認定Kubernetes管理者 (CKA-JP) 合格体験記](/contents/certification/how-I-passed-the-exam/cka-jp.md)
 - [Google Cloud認定資格 Professional Cloud Architect試験 合格体験記](/contents/certification/how-I-passed-the-exam/google-cloud-pca.md)
+- [LPIC-1 Exam 102(Version: 5.0) 合格体験記](/contents/certification/how-I-passed-the-exam/lpic-102.md)
+- [LPIC-1 Exam 101(Version: 5.0) 合格体験記](/contents/certification/how-I-passed-the-exam/lpic-101.md)
+- [AWS Certified Solutions Architect - Associate(SAA-C03) 合格体験記](/contents/certification/how-I-passed-the-exam/aws-saa.md)
+- [AWS Certified Cloud Practitioner(CLF-C02) 合格体験記](/contents/certification/how-I-passed-the-exam/aws-clf.md)
 
 ## その他
 
