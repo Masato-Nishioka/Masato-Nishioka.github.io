@@ -5,6 +5,9 @@ AIにワークフローの作成を依頼する際に使えるプロンプトの
 
 ## プロンプト
 
+以下をコピペしてAIに投げる。
+
+```text
 私は、「」を実現するGitHub Actionsのワークフローを作成したいと考えています。  
 要件は以下の通りです。
 
@@ -26,31 +29,32 @@ AIにワークフローの作成を依頼する際に使えるプロンプトの
 以下にサンプルのワークフローを記載します。  
 このサンプルに追記する形でワークフローを生成してください。
 
-```yaml
-name: Example
-on:
+  ```yaml
+  name: Example
+  on:
 
-permissions: {}
+  permissions: {}
 
-defaults:
-  run:
-    shell: bash
+  defaults:
+    run:
+      shell: bash
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
 
-jobs:
-  example:
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    permissions:
-      contents: read
-    steps:
-      - name: Run actionlint
-        run: |
-          set -x
-          docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:1.7.3
+  jobs:
+    example:
+      runs-on: ubuntu-latest
+      timeout-minutes: 5
+      permissions:
+        contents: read
+      steps:
+        - name: Run actionlint
+          run: |
+            set -x
+            docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:1.7.3
+  ```
 ```
 
 ## 留意事項
